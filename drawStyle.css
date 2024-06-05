@@ -1,0 +1,188 @@
+body{
+	background-color: #ffc2ba;
+cursor: url('image/cupcake.cur'),auto;
+	
+}
+#can{
+	background-color: white;
+	border:5px solid #ff3863;
+	position: absolute;
+	left:18%;
+	top:30%;
+	cursor: url('image/cursor_techniques.png'), auto;
+}
+h1{
+	color: #ff3863;
+	background-color: RGB(242,158,153);
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-size: 7em;
+	margin-top: 20px;
+	margin-bottom:20px;
+	margin-left: 16.6%;
+	font-style: italic;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 15px white;
+	width: 1000px;
+	text-align: center;
+	outline: 10px solid  #ff3863; 
+    outline-offset: 11px;
+	outline-style: double;
+}
+#controls{
+	position: absolute;
+	left:47%;
+	top:30%;
+	margin-left:17px;
+}
+#chooseColor{
+	color:#ff3863;
+	font-family: 'ZCOOL KuaiLe', cursive;
+	position:absolute;
+	left: 0px;
+	top:30px;
+	transform: rotate(90deg);
+	margin-left: 10px;
+}
+#green{
+	position:relative;
+	width:10px;
+	height:10px;
+	background:#81c255;
+	margin-left: 10px;
+}
+#blue{
+	margin-top: 10px;
+	position:relative;
+	width:10px;
+	height:10px;
+	background:#557dc2;
+	margin-left: 10px;
+}
+#red{
+	position:relative;
+	width:10px;
+	height:10px;
+	background:#bd322f;
+	margin-left: 10px;
+}
+#yellow{
+	position:relative;
+	width:10px;
+	height:10px;
+	background:yellow;
+	margin-left: 10px;
+}
+#orange{
+	position:relative;
+	width:10px;
+	height:10px;
+	background:orange;
+	margin-left: 10px;
+}
+#black{
+	position:relative;
+	width:10px;
+	height:10px;
+	background:black;
+	margin-left: 10px;
+}
+#eraser{
+	color:#ff3863;
+	position:relative;
+	font-family: 'ZCOOL KuaiLe', cursive;
+}
+#white{
+	position:relative;
+	width:15px;
+	height:15px;
+	background:white;
+	border:2px solid #ff3863;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+#canvasimg{
+	position:absolute;
+	top:0px;
+	left: 96px;
+	display:none;
+	background-color: white;
+}
+#btn{
+	background-color: #ffb7ad;
+	font-family: 'ZCOOL KuaiLe', cursive;
+	position:absolute;
+	top:150px;
+	color: #ff3863;
+	left: 1px;
+	border:2px double #ff3863;
+}
+#clr{
+	font-family: 'ZCOOL KuaiLe', cursive;
+	position:absolute;
+	top:180px;
+	left: 1px;
+	color: #ff3863;
+	background-color: #ffb7ad;
+	border:2px double #ff3863;
+}
+#done{
+	font-family: 'ZCOOL KuaiLe', cursive;
+	position:absolute;
+	top:210px;
+	left: 1px;
+	color:#ff3863;
+	background-color: #ffb7ad;
+	border:2px double #ff3863;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 40px;
+	height: 2em;
+   width: 1000px;
+	margin-left: 17%;
+  
+   color: white;
+   text-align: center;
+}
+p{
+	font-family: 'ZCOOL KuaiLe', cursive;
+	margin-bottom: 10px;
+	background-color: RGB(242,158,153);
+}
+
+input:hover{
+	cursor: url('image/cupcake.cur'),auto;
+}
+a{
+	color: #ff3863;
+	text-decoration: none;
+}
+a:hover{
+	font-style: italic;
+	color: #ff3863;
+	cursor: url('image/cupcake.cur'),auto;
+}
+.but{
+	position: absolute;
+	left:48%;
+	top:29%;
+	z-index: -1;
+}
+::selection{
+	color: pink;
+  background: black;
+}
+.bg{
+	position: relative;
+	border-left: 20px solid white;
+	border-right: 20px solid white;
+	border-top: 20px solid white;
+	z-index: -1;
+	left: 15.3%;
+	top:-40px;
+	margin-bottom: 30px;
+}
+
+

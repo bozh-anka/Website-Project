@@ -1,0 +1,166 @@
+<html>
+    <script type="text/javascript">
+    var canvas, ctx, flag = false,
+        prevX = 0,
+        currX = 0,
+        prevY = 0,
+        currY = 0,
+        dot_flag = false;
+
+    var x = "black",
+        y = 2;
+    
+    function init() {
+        canvas = document.getElementById('can');
+        ctx = canvas.getContext("2d");
+        w = canvas.width;
+        h = canvas.height;
+    
+        canvas.addEventListener("mousemove", function (e) {
+            findxy('move', e)
+        }, false);
+        canvas.addEventListener("mousedown", function (e) {
+            findxy('down', e)
+        }, false);
+        canvas.addEventListener("mouseup", function (e) {
+            findxy('up', e)
+        }, false);
+        canvas.addEventListener("mouseout", function (e) {
+            findxy('out', e)
+        }, false);
+    }
+	
+	function color(obj) {
+        switch (obj.id) {
+            case "green":
+                x = "#81c255";
+                break;
+            case "blue":
+                x = "#557dc2";
+                break;
+            case "red":
+                x = "#bd322f";
+                break;
+            case "yellow":
+                x = "yellow";
+                break;
+            case "orange":
+                x = "orange";
+                break;
+            case "black":
+                x = "black";
+                break;
+            case "white":
+                x = "white";
+                break;
+        }
+        if (x == "white") y = 14;
+        else y = 2;
+    
+    }
+	function draw() {
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(currX, currY);
+        ctx.strokeStyle = x;
+        ctx.lineWidth = y;
+        ctx.stroke();
+        ctx.closePath();
+    }
+    
+    function erase() {
+        var m = confirm("Want to clear");
+        if (m) {
+            ctx.clearRect(0, 0, w, h);
+            document.getElementById("canvasimg").style.display = "none";
+        }
+    }
+    
+    function save() {
+        document.getElementById("canvasimg").style.border = "5px solid #ff3863";
+        var dataURL = canvas.toDataURL();
+        document.getElementById("canvasimg").src = dataURL;
+        document.getElementById("canvasimg").style.display = "block";
+    }
+	 function findxy(res, e) {
+        if (res == 'down') {
+            prevX = currX;
+            prevY = currY;
+            currX = e.clientX - canvas.offsetLeft;
+            currY = e.clientY - canvas.offsetTop;
+    
+            flag = true;
+            dot_flag = true;
+            if (dot_flag) {
+                ctx.beginPath();
+                ctx.fillStyle = x;
+                ctx.fillRect(currX, currY, 2, 2);
+                ctx.closePath();
+                dot_flag = false;
+            }
+        }
+        if (res == 'up' || res == "out") {
+            flag = false;
+        }
+        if (res == 'move') {
+            if (flag) {
+                prevX = currX;
+                prevY = currY;
+                currX = e.clientX - canvas.offsetLeft;
+                currY = e.clientY - canvas.offsetTop;
+                draw();
+            }
+        }
+    }
+		function finished () {
+		  document.getElementById("done").onclick 
+        location.href = "content.html";
+    };
+    </script>
+	<head>
+		<title>
+		DRAW
+		</title>
+	<link rel="stylesheet"  href="drawStyle.css"/>
+	
+	<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANVZyMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANVZyMDVWcv82ZH/ENVZyEAAAAAAAAAAAAAAAAAAAAAAAAAAANVZyQDVWchAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1VnL/SrLK/zVadvg2ZoJbAAAAADVWciA2ZYCQNV978DVWcv81VnJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANVZy/13j+f9W2vD/PXaR/TVhfOI0Xnr/LavG/yXM6P8zZYH/NVZyEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVWcv9d4/n/XeP5/1vi+P9Atcz/LdDq/yfQ6/8nyuX/NmWA2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1Wnb4Wd/1/13j+f9d4/n/P93z/zvc8v8v1e7/LLDL/zVgfHkAAAAAAAAAAAAAAAAAAAAAAAAAADVWchA1YXzQSaC5/Xrm+/9x5fv/X+P5/z/d8/873PL/L9Xu/zF/m/w1VnJAAAAAAAAAAAAAAAAAAAAAADVWcjA1XnruWMbd/3/n/P+B5/z/gef8/3rm+/9M4PX/O9zy/y/V7v8rt9L/NWF84jVWchAAAAAAAAAAADZmgls1W3f6T8ff/3jm+/+B5/z/hOf8/4Tn/P+B5/z/dOX6/zvc8v862/H/K9Ls/y+ivf81YXy/AAAAAAAAAAA2a4ZMNmWA2Dhfev9Ckqv7UMLZ/3Dh9v+c6/z/i+j8/4Dn+/9E3vT/O9zy/zvc8v8x0er/MYai/TZifp4AAAAAAAAAAAAAAAAAAAAANVZyQDZlgJA4Y374guj7/47o/P945vv/SLDI/zZwi+81XHj7NVZy/zVWcv81VnL/NVZyEAAAAAAAAAAAAAAAAAAAAAAAAAAANmJ+nlzH3f+L6fz/cuP5/zhjfvg1VnJANVZyIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVWcjA/fpn9b+X7/1CZsv41VnJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANWF84kqpwv82ZH/EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVgfHk1W3f5NVZyIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANVZyMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAPP/AADxxwAA8AcAAPAHAADwDwAA4A8AAMAHAACAAwAAgAEAAPABAAD4PwAA/H8AAPx/AAD+/wAA//8AAA==" rel="icon" type="image/x-icon" />
+		<style>
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+</style>
+		
+	</head>
+	 <body onload="init()">
+		 <h1> Try Drawing!</h1>
+        <canvas id="can" width="400" height="400"></canvas>
+		 <div id="controls">
+        <div id="chooseColor">Colors</div>
+        <div id="blue" onclick="color(this)"></div>
+		<div id="green" onclick="color(this)"></div>
+        <div id="yellow" onclick="color(this)"></div>
+        <div id="orange" onclick="color(this)"></div>
+		<div id="red" onclick="color(this)"></div>
+        <div id="black" onclick="color(this)"></div>
+			 <br>
+        <div id="eraser">Erase</div>
+			
+        <div id="white" onclick="color(this)"></div>
+        <img id="canvasimg">
+			 <br>
+		
+        <input type="button" value="save" id="btn" size="30" onclick="save()" >
+			 <br>
+			 <br>
+        <input type="button" value="clear" id="clr" size="23" onclick="erase()">
+			 <br>
+			 <br>
+			  <input type="button" value="Done" id="done" size="23" onclick="finished()">
+			 
+		 </div>
+		 <div class="footer">
+  <p><a href="mainPage.html"> Artists</a> &#9679; <a href="content.html">Techniques &amp; Mediums</a>&#9679;<a href="sources.html">Sources</a>&#9679;<a href="startPage.html">Start Page</a>
+			 <br></p>
+</div>
+		 <img class="bg" src="image/background.jpg"/>
+		 <img class="but" src="image/buttonsBg.png"/>
+    </body>
+    </html>

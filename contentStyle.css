@@ -1,0 +1,299 @@
+body{
+	margin: auto;
+		background-color: #f2d183;
+	cursor: url(image/cursor_techniques.png), auto;
+}
+h1{
+	
+	margin: auto;
+	margin-top: 60px;
+	margin-bottom:50px;
+	padding: 10px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 15px white;
+	width: 1000px;
+	text-align: center;
+}
+::selection{
+	color: goldenrod;
+  background: black
+}
+img{
+	position: relative;
+	
+}
+
+#wrap{
+	float:right;
+	width: 90%;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+	font-family: 'Big Shoulders Stencil Display', cursive;
+  background-color: goldenrod;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:  #4a2c08;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: darkgoldenrod;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+#sidebar{
+	position: fixed;
+	background-color: darkgoldenrod;
+	top:0;
+	height: 1000px;
+	width:1em;
+	outline-offset: 4px;
+	outline-style: solid;
+	outline-color: darkgoldenrod;
+}
+mark{
+	color: darkgoldenrod;
+	background-color:  goldenrod;
+	z-index: 2;
+}
+mark:hover{
+	color:#4a2c08;
+}
+h3{
+	width: 100%;
+	height: 2em;
+	background-color: saddlebrown;
+	
+}
+#title{
+	text-align: center;
+	font-family: 'Audiowide', cursive;
+	background-color:  saddlebrown;
+	color: #4a2c08;
+	font-size: 3em;
+}
+.typeTitle{
+	text-align: center;
+	font-family: 'Big Shoulders Stencil Display', cursive;
+	color: #f2d183;
+	background-color: goldenrod;
+	
+}
+.medium{
+	text-align: center;
+	z-index: 1;
+	border-bottom: 2px solid goldenrod;
+	color:goldenrod;
+}
+#gac{
+	text-align: center;
+	margin-right: 40px;
+	border-bottom: 2px solid goldenrod;
+	padding-bottom: 10px;
+}
+#fee{
+	text-align: center;	
+		border-bottom: 2px solid goldenrod;
+	padding-bottom: 10px;
+}
+#cranbg{
+	text-align: center;
+		border-bottom: 2px solid goldenrod;
+	padding-bottom: 10px;
+	
+}
+#horse{
+	text-align: center;
+		border-bottom: 2px solid goldenrod;
+	padding-bottom: 10px;
+}
+#hedge{
+	text-align: center;
+		border-bottom: 2px solid goldenrod;
+	padding-bottom: 10px;
+}
+p{
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-family: 'PT Serif Caption', serif;
+	background-color: goldenrod;
+	padding: 10px;
+	color:  #4a2c08;
+	font-size: 1.2em;
+}
+.ex{
+		color:  #4a2c08;
+	font-family: 'Dosis', sans-serif;
+}
+/*body{
+	background-color: #f2d183;
+	cursor: url(image/cursor_techniques.png), auto;
+	margin: auto;
+	width: 1500px;
+}
+::selection{
+	color: pink;
+  background: hotpink;
+}
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fcab92;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ff3863;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#content {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+#sidebar{
+	position: fixed;
+	background-color: #fcab92;
+	top:0;
+	height: 1000px;
+	width:1em;
+	outline-offset: 4px;
+	outline-style: solid;
+	outline-color: #fcab92;
+}
+mark{
+	color: #ff3863;
+	background-color: #ff8575;
+}
+mark:hover{
+	color: white;
+}
+.band{
+	width: 100%;
+	height: 1em;
+	background-color: forestgreen;
+	z-index: 1;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.typeTitle{
+	text-align: center;
+	font-family: 'Big Shoulders Stencil Display', cursive;
+	color: #f2d183;
+	background-color: goldenrod;
+	z-index: -1;
+}
+
+.bg{
+	border-left: 20px solid white;
+	border-right:20px solid white; 
+	position: absolute;
+	z-index: -1;
+	left: 240px;
+	top:120px;
+	padding-bottom: 20px;	
+}
+
+video{
+	border: 20px solid goldenrod;
+	
+}
+h6{
+	text-align: center;
+	color:#4a2c08;
+}
+
+#cran1{
+	z-index: 2;
+	position: relative;
+	left:340px;
+	top:2550px;
+}
+#cran2{
+	z-index: 2;
+	position: relative;
+	left:740px;
+	top:2350px;
+	transform: rotate(10deg);
+}
+#gac{
+	text-align: center;
+	margin-right: 40px;
+}
+#title{
+	text-align: center;
+	font-family: 'Audiowide', cursive;
+	background-color: #7d5c15;
+	color: #4a2c08;
+	font-size: 3em;
+}
+.medium{
+	text-align: center;
+	z-index: 1;
+}
+img{
+	z-index: 1;
+}
+p{
+	margin-left: 40px;
+	margin-right: 40px;
+	background-color: #e3b042;
+	border-radius: 20px;
+	padding: 20px;
+	z-index: 1;
+}
+h2{
+	z-index: 1;
+}
+
+.ex{
+	z-index: 1;
+}
+#ves{
+	z-index: 1;
+}*/

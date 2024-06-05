@@ -1,0 +1,143 @@
+body{
+	margin: auto;
+	background-color:RGB(235, 195, 181); 
+	cursor: url(image/arts_cur.png),auto;
+}
+h1{
+	color: #ff3863;
+	background-color: #ff8575;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 7em;
+	margin: auto;
+	margin-top: 60px;
+	margin-bottom:50px;
+	padding: 10px;
+	font-style: italic;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 15px white;
+	width: 1000px;
+	text-align: center;
+	outline: 10px solid #ff8575; 
+    outline-offset: 10px;
+	outline-style: double;
+}
+::selection{
+	color: #e5a8f7;
+  background: #a760bd;
+}
+img{
+	position: relative;
+	border-radius: 200px;
+	border: 10px double #ff3863;
+}
+
+.float{
+	margin-top: -20px;
+ 	padding: 25px;
+	background-color: #ff8575;
+	width: 60%;
+	text-align: center;
+	border: 4px;
+	margin-left: 15%;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;	
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;	
+	margin-bottom: 50px;
+	margin-right: 50px;
+}
+#wrap{
+	float:right;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fcab92;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+	cursor: url(image/arts_cur.png),auto;
+	font-family: 'Audiowide', cursive;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ff3863;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+#sidebar{
+	position: fixed;
+	background-color: #fcab92;
+	top:0;
+	height: 1000px;
+	width:1em;
+	outline-offset: 4px;
+	outline-style: solid;
+	outline-color: #fcab92;
+}
+mark{
+	color: #ff3863;
+	background-color: #ff8575;
+}
+mark:hover{
+	cursor: url(image/arts_cur.png),auto;
+	color: white;
+}
+h3{
+	width: 100%;
+	height: 2em;
+	background-color: #ff3863;
+	
+}
+p{
+	font-family: 'Audiowide', cursive;
+	color:#d43763;
+}
+ul{
+	list-style-type: none;
+	background-color: #fca297;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+li{
+	margin-left: 12%;
+	margin-right: 15%;
+	padding-left: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-left: 5px solid #ff3863;
+	border-right: 5px solid #ff3863;
+
+	
+}/*
+#extra1{
+	margin-left: 90%;
+	bottom: 5px double #ff3863;
+	position: relative;
+	height: 100%;
+	width: 20px;
+	background-color:  #ff3863;
+}*/
